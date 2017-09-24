@@ -1,0 +1,55 @@
+﻿@model ProjetoNAC.Models.Investidor
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar Investidor</h2>
+
+@using (Html.BeginForm())
+{
+
+    <table class="table">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Id)</td>
+            <td>@Html.TextBoxFor(model => model.Id)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Nome)</td>
+            <td>@Html.TextBoxFor(model => model.Nome)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Email)</td>
+            <td>@Html.TextBoxFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Telefone)</td>
+            <td>@Html.TextBoxFor(model => model.Telefone)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Genero)</td>
+            <td>
+                @Html.RadioButtonFor(model => model.Genero, "M", new { @checked = true }) Masculino
+                @Html.RadioButtonFor(model => model.Genero, "F") Feminino
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Endereco)</td>
+            <td>@Html.TextBoxFor(model => model.Endereco)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Cidade)</td>
+            <td>@Html.TextBoxFor(model => model.Cidade)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Estado)</td>
+            <td>@Html.TextBoxFor(model => model.Estado)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Cadastrar"/></td>
+        </tr>
+    </table>
+    <br/>
+    @Html.ActionLink("Voltar para o Inicio", "Index", "Home")
+}
+
+
