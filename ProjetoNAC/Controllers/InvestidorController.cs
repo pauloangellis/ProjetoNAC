@@ -48,7 +48,7 @@ namespace ProjetoNAC.Controllers
         public ActionResult Editar(Investidor i)
         {
             Repositorio.Instance().AlterarInvestidor(i);
-            return View("Listar");
+            return RedirectToAction("Listar");
         }
 
     }
