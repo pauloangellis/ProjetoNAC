@@ -267,6 +267,8 @@
     <Content Include="Views\Investidor\Sucesso.cshtml" />
     <Content Include="Views\Investidor\Listar.cshtml" />
     <Content Include="Views\Contato\Contato.cshtml" />
+    <Content Include="Views\Contato\Cadastrar.cshtml" />
+    <Content Include="Views\Contato\Listar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,10 +10,12 @@ namespace ProjetoNAC.Models
         private static Repositorio _repositorio;
 
         private List<Investidor> investidores;
+        private List<Contato> contatos;
 
         private Repositorio()
         {
             investidores = new List<Investidor>();
+            contatos = new List<Contato>();
         }
 
         public static Repositorio Instance()
@@ -23,7 +25,7 @@ namespace ProjetoNAC.Models
             }
             return _repositorio;
         }
-
+        //Investidor CRUD
         public void IncluirInvestidor(Investidor invest)
         {
             investidores.Add(invest);
@@ -57,6 +59,37 @@ namespace ProjetoNAC.Models
                     s.Endereco = invest.Endereco;
                     s.Cidade = invest.Cidade;
                     s.Estado = invest.Estado;
+                });
+        }
+        //Contato
+        public void IncluirContato(Contato cont)
+        {
+            contatos.Add(cont);
+        }
+        
+        public IEnumerable<Contato> ListarContatos()
+        {
+            return contatos;
+        }
+
+        public Contato ListarContato(int id)
+        {
+            return contatos.Where(i => i.Id == id).First();
+        }
+        public void ExcluirContato(int id)
+        {
+            contatos.Remove(ListarContato(id));
+        }
+
+        public void AlterarContato(Contato cont)
+        {
+            contatos.Where(i => i.Id == cont.Id)
+                .ToList()
+                .ForEach(s =>
+                {
+                    s.Nome = cont.Nome;
+                    s.Email = cont.Email;
+                    s.Mensagem = cont.Mensagem;
                 });
         }
     }

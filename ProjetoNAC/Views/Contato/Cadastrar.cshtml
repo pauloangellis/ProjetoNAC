@@ -1,0 +1,26 @@
+﻿@model ProjetoNAC.Models.Contato
+@{
+    ViewBag.Title = "Contato";
+}
+
+<h2>Cadastrar</h2>
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Nome)</td>
+            <td>@Html.TextBoxFor(model => model.Nome)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Email)</td>
+            <td>@Html.TextBoxFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Mensagem)</td>
+            <td>@Html.TextAreaFor(model => model.Mensagem)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Enviar" /></td>
+        </tr>
+    </table>
+}
