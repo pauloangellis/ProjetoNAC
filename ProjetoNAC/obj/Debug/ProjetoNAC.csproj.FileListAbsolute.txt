@@ -337,3 +337,4 @@ C:\Users\logonrm\Documents\ProjetoNAC\ProjetoNAC\bin\pt-br\Microsoft.Owin.Securi
 C:\Users\logonrm\Documents\ProjetoNAC\ProjetoNAC\obj\Debug\ProjetoNAC.csprojResolveAssemblyReference.cache
 C:\Users\logonrm\Documents\ProjetoNAC\ProjetoNAC\obj\Debug\ProjetoNAC.dll
 C:\Users\logonrm\Documents\ProjetoNAC\ProjetoNAC\obj\Debug\ProjetoNAC.pdb
+C:\Users\paulo\Documents\Visual Studio 2017\Projects\ProjetoNAC\ProjetoNAC\obj\Debug\ProjetoNAC.csproj.CoreCompileInputs.cache
